@@ -529,10 +529,10 @@ section {
   background-image: url("sellathon.jpg");
 }
 .speaker:nth-child(5){
-  background-image: url("p.jpg");
+  background-image: url("marketwise.jpg");
 }
 .speaker:nth-child(6){
-  background-image: url("p.jpg");
+  background-image: url("maximise.jpg");
 }
 @keyframes sidemove{
   0%{
@@ -616,14 +616,14 @@ section {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(3, 36, 125, 0.875); /* Black see-through */
   color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
   opacity:0;
   color: white;
-  font-size: 20px;
+  font-family: 'Poppins';
+  font-size: 30px;
   padding: 20px;
   text-align: center;
   overflow: hidden;
