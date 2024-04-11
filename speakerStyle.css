@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:wght@700&family=Orbitron:wght@400..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins','Montserrat', sans-serif;
+    background-color: #160f22;
+    color: #ccc8d4;
+    display: flex;
+   
+}
+
+body > .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 4px solid #7861a1;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px #691ded;
+    backdrop-filter: blur(3px);
+    text-align: center;
+}
+
+.event-info {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-info h2 {
+    font-size: 36px;
+    margin-top: 0;
+    color: #bba6c8;
+}
+
+.details {
+    margin-bottom: 20px;
+    font-weight: thin;
+}
+
+.register-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b2364;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+    background-color: #691ded;
+}
+
+.compete{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Your existing CSS styles */
+
+/* .timeline {
+  margin-top: 50px;
+}
+
+.timeline h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #bba6c8;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.timeline li span {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  width: 80px;
+  background-color: #3b2364;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+} */
+
+.prize-pool{
+  text-align: center;
+  margin: 20px;
+}
+.prize-pool img {
+  width: 200px;
+  height: auto;
+  border-radius: 30px;
+}
+
+/* Add any additional styling for the prize pool section as needed */
+/* Your existing CSS styles */
+
+/* .timeline {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.timeline h3 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #bba6c8;
+  text-align: center;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease both;
+}
+
+.timeline li .date {
+  display: inline-block;
+  width: 100px;
+  background-color: #3b2364;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+} */
+
+
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.organizer-info{
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.organizer-info h3{
+  font-size: 1.5rem;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  transition: transform 2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+
+.social-links a{
+  text-decoration: none;
+  color: #ccc8d4;
+  font-size: 2rem;
+  padding: 10px 15px;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 0 15px;
+}
+.timeline{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1200px;
+  margin: 10px auto 100 auto;
+  font-family: "Poppins ";
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline .container{
+  
+  position: relative;
+  width: fit-content;
+  opacity: 1;
+}
+
+.timeline .container .textbox{
+   padding: 20px 30px;
+   background: #9a9797af;
+   position: relative;
+   border-radius: 6px;
+   font-size: 15px;
+   color: #fff;
+   border: 2px solid lightblue;
+   /* box-shadow: 0 0 20px rgb(85, 212, 254); */
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #bd97ff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  border-radius: 30px;
+}
+.left-container{
+  left:-25%;
+}
+
+.right-container{
+  left: 25%;
+}
+
+
+.textbox h2{
+  font-weight: 600;
+}
+
+.right-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -15px;
+  z-index: 1;
+  top: 28px;
+}
+
+.left-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+  z-index: 1;
+  top: 28px;
+}
+
+.logo{
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  max-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.logo img{
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+}
