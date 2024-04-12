@@ -8,12 +8,102 @@
   <link rel="stylesheet" href="speakerStyle.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 </head>
+<style>@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
 
+  .box-2 .btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+  }
+  
+  /* Button Two */
+  .box-2 .btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+  }
+  .box-2 .btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  }
+  .box-2 .btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+  }
+  .box-2 .btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+  }
+  .box-2 .btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+  }
+  .box-2 .btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+  }
+  .box-2 .btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+  position: relative; /* Added position relative to .btn */
+  }
+  
+  /* Button Two */
+  .box-2 .btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+  }
+  .box-2 .btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  top: 0; /* Added to position the text properly */
+  left: 0; /* Added to position the text properly */
+  }
+  </style>
 <body>
   <div id="tsparticles">
     <canvas data-generated="true"
       style="width: 100% !important; height: 100% !important; position: fixed !important; z-index: -1 !important; top: 0px !important; left: 0px !important; pointer-events: none; background-color: #160f22;"
       aria-hidden="true" width="1137" height="1072"></canvas>
+  </div>
+  <div class="box-2">
+    <a href="index.html">
+      <div class="btn btn-two">
+        <span>Back</span>
+      </div>
+    </a>
   </div>
   <div class="container">
     <div class="event-info">
