@@ -32,12 +32,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
   justify-content: space-evenly;
- 
 }
 
 .team-head-text {
@@ -57,16 +52,17 @@
 }
 
 .container {
-  max-width: 1380px;
+  /* max-width: 1380px;
   margin-top: 60px;
   margin-right: auto;
   margin-bottom: 60px;
-  margin-left: auto;
+  margin-left: auto; 
   padding-top: 0px;
   padding-right: 30px;
   padding-bottom: 0px;
-  padding-left: 30px;
-  
+  padding-left: 30px; */
+  padding: 0;
+  margin: 0;
 }
 
 .card {
@@ -76,18 +72,18 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
-  padding-right: 25px;
+  padding-right: 100px;
   padding-bottom: 30px;
-  padding-left: 25px;
+  padding-left: 100px;
 }
 
 .card-container {
   width: 280px;
-  
+  border-radius: 30px;
   margin-top: 0px;
-  margin-right: 10px;
-  margin-bottom: 25px;
-  margin-left: 10px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  margin-left: 100px;
   background-color: rgba(90, 113, 176, 0.623);
 }
 
@@ -96,8 +92,9 @@
   margin-right: 0px;
   margin-bottom: 5px;
   margin-left: 0px;
-  font-size: 18px;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFF;
 }
 
 .position {
@@ -105,6 +102,7 @@
   margin-right: 0px;
   margin-bottom: 10px;
   margin-left: 0px;
+  color: #FFF;
 }
 
 .feature-text {
@@ -117,15 +115,16 @@
 }
 
 .social-icons {
-  width: 70px;
+  /* width: 70px; */
   display: flex;
   justify-content: space-between ;
-
+  
 }
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+  margin: 10px;
 }
 
 
@@ -133,20 +132,24 @@
   clip-path: circle(50% at 50% 50%);
   width: 130px;
   height: 130px;
+  
 }
 
 .team-member-image {
   max-width: 100%;
+  border: solid #FFF;
+  border-radius: 50%;
 }
 
 @media (max-width: 500px) {
   .card-container {
-    width: 100%;
+    width: auto;
     margin-top: 0px;
-    margin-right: 0px;
+    margin-right: 20px;
     margin-bottom: 25px;
-    margin-left: 0px;
+    margin-left: 20px;
   }
+  
 }
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
 
@@ -498,16 +501,16 @@ left: 0; /* Added to position the text properly */
       <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
         <div class="card">
           <div class="team-image-wrapper">
-            <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+            <img class="team-member-image" src="Abhishek_Sarkar.png">
           </div>
           <p class="text-blk name">
-            Davis George
+            Abhishek Sarkar
           </p>
           <p class="text-blk position">
-            CEO
+            Lead
           </p>
           <div class="social-icons">
-            <a href="https://www.twitter.com" target="_blank">
+            <a href="https://www.linkedin.com/in/abhishek-sarkar1301/" target="_blank">
               <img class="twitter-icon" src="linked.svg">
             </a>
             <a href="https://www.facebook.com" target="_blank">
@@ -522,17 +525,17 @@ left: 0; /* Added to position the text properly */
       <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
         <div class="card">
           <div class="team-image-wrapper">
-            <img class="team-member-image" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+            <img class="team-member-image" src="Manthan.jpg">
           </div>
           <p class="text-blk name">
-            Davis George
+            Manthan Shah
           </p>
           <p class="text-blk position">
-            CEO
+            Co-Lead
           </p>
           
           <div class="social-icons">
-            <a href="https://www.twitter.com" target="_blank">
+            <a href="https://www.linkedin.com/in/manthan-shah-5084b3258" target="_blank">
               <img class="twitter-icon" src="linked.svg">
             </a>
             <a href="https://www.facebook.com" target="_blank">
@@ -995,6 +998,8 @@ left: 0; /* Added to position the text properly */
         </div>
         </div>
       </div>
+
+      
   <footer class="contact-section" id="connect">
     <div class="csm">
       <div class="container">
