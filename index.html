@@ -4,9 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turn Image In To An Animation - Using HTML & CSS Only</title>
+  <title>ESUMMIT 2024 | IIITN</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 
 <body>
@@ -19,27 +20,34 @@
       Your browser does not support the video tag.
     </video> -->
     <div class="load-main">
-    <img src="logoecell.png" alt="E-cell Logo">
-  </div>
+      <img src="logoecell.png" alt="E-cell Logo">
+    </div>
     <div class="loading-text">Loading...</div>
   </div>
 
   <header>
     <div class="nav-bar">
-      <img
-        src="logoecell.png"
-        alt="E-cell logo" class="logo">
+      <img src="logoecell.png" alt="E-cell logo" class="logo">
       <div class="navigation">
         <div class="nav-items">
           <i class="uil uil-times nav-close-btn"></i>
-          <a href="#home"><i class="uil uil-home"></i> <span>Home</span></a>
-          <a href="#about"><i class="uil uil-compass"></i> About</a>
-          <a href="#Speakers"><i class="uil uil-info-circle"></i> Speakers</a>
-          <a href="#events"><i class="uil uil-document-layout-left"></i> Events</a>
-          <a href="#event-timeline"><i class="uil uil-envelope"></i> Timeline</a>
-          <a href="Blog1.html"><i class="uil uil-envelope"></i> Blogs</a>
-          <a href="Sponsor.html"><i class="uil uil-envelope"></i> Sponsor</a>
-          <a href="contact.html"><i class="uil uil-envelope"></i> Contact</a>
+          <a href="#home">Home</a>
+          <span>
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">About</button>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#about1">About IIC</a>
+                <a href="#about2">About Ecell</a>
+                <a href="#about3">About Esummit</a>
+              </div>
+            </div>
+          </span>
+          <a href="#Speakers">Speakers</a>
+          <a href="#events">Events</a>
+          <a href="#event-timeline">Timeline</a>
+          <a href="Blog1.html">Blogs</a>
+          <a href="Sponsor.html">Sponsor</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
       <i class="uil uil-apps nav-menu-btn"></i>
@@ -52,40 +60,66 @@
   </div>
   <section class="home" id="home">
 
+    <div class="imp-icons">
+        <img src="iic.png" alt="">
+        <img src="IIIT Nagpur.png" alt="">
+    </div>
+
     <div class="media-icons">
-     
+
       <a href="https://www.instagram.com/ecell_iiitn?igsh=MThoZ2VibmxibzhuaQ=="><i class="uil uil-instagram"></i></a>
-      
-      <a href="https://www.linkedin.com/in/ecell-iiitn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="uil uil-linkedin"></i></a>
+      <a
+        href="https://www.linkedin.com/in/ecell-iiitn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+          class="uil uil-linkedin"></i></a>
       <a href="mailto:udyam@iiitn.ac.in"><i class="uil uil-envelope"></i></a>
 
     </div>
 
     <div class="text-content">
       <img src="esummitlogo.png" alt="esummitlogo">
-   </div>
-  
-  </section>
-
-  <div color="gray" class="line"></div>
-
-  <section class="about-section" id="about">
-    <div class="about-us">
-      <h2>About &nbsp Esummit</h2>
-      <p class="content">"E-Summit, the flagship event of IIIT Nagpur, symbolizes the collective ambition and dedication of E-Cell IIIT Nagpur and the esteemed Innovation Council Club. This annual gathering serves as a beacon of inspiration, igniting the flames of innovation and entrepreneurship among attendees. Through thought-provoking keynote speeches, interactive panel discussions, and hands-on workshops, participants are not only equipped with the tools and knowledge needed to navigate the dynamic landscape of entrepreneurship but are also encouraged to push boundaries, embrace failure as a stepping stone to success, and dream big. Moreover, E-Summit serves as a testament to our commitment to fostering an inclusive and diverse ecosystem where individuals from all backgrounds are empowered to pursue their entrepreneurial aspirations and contribute meaningfully to the advancement of society."</p>
     </div>
 
   </section>
 
   <div color="gray" class="line"></div>
 
+  <section class="about-section" id="about1">
+    <div class="about-us">
+      <h2>About &nbsp IIC</h2>
+      <p class="content">"The Institute Innovation Council at IIIT Nagpur is dedicated to constructing a vibrant entrepreneurial ecosystem within the institution. Our mission revolves around nurturing human potential to contribute to nation-building, fostering entrepreneurship awareness, and cultivating an environment conducive to innovation. We aim to instill a culture of innovation-driven entrepreneurship among faculty and students, guiding them towards setting up enterprises for the development of indigenous products and services. Our goals include raising awareness among every individual at IIIT Nagpur, encouraging active participation from students, faculty, and alumni, organizing idea tanks and contests, exploring the entrepreneur world, visualizing products, and laying out plans for startup ventures."</p>
+    </div>
+  </section>
+  <section class="about-section" id="about2">
+    <div class="about-us">
+      <h2>About &nbsp Ecell</h2>
+      <p class="content">"Our udyam Entrepreneurship Cell thrives as a dynamic hub for young visionaries committed to fostering entrepreneurship, innovation, and creativity. We're dedicated to equipping the next generation of entrepreneurs and trailblazers with essential tools, resources, and pathways for realizing their aspirations. Our mission pulsates with the energy of shaping tomorrow's leaders, guiding them towards success in an ever-evolving landscape. With a vibrant spirit and forward-thinking approach, we cultivate an environment where ideas flourish, collaborations blossom, and dreams transform into reality. Together, we ignite the spark of innovation and drive positive change, propelling our community towards boundless opportunities and growth."</p>
+    </div>
+  </section>
+  <section class="about-section" id="about3">
+    <div class="about-us">
+      <h2>About &nbsp Esummit</h2>
+      <p class="content">"E-Summit, the flagship event of IIIT Nagpur, symbolizes the collective ambition and dedication
+        of E-Cell IIIT Nagpur and the esteemed Innovation Council Club. This annual gathering serves as a beacon of
+        inspiration, igniting the flames of innovation and entrepreneurship among attendees. Through thought-provoking
+        keynote speeches, interactive panel discussions, and hands-on workshops, participants are not only equipped with
+        the tools and knowledge needed to navigate the dynamic landscape of entrepreneurship but are also encouraged to
+        push boundaries, embrace failure as a stepping stone to success, and dream big. Moreover, E-Summit serves as a
+        testament to our commitment to fostering an inclusive and diverse ecosystem where individuals from all
+        backgrounds are empowered to pursue their entrepreneurial aspirations and contribute meaningfully to the
+        advancement of society."</p>
+    </div>
+  </section>
+
+
+  <div color="gray" class="line"></div>
+
   <Section class="guests" id="Speakers">
-    <span class="title">Speakers</span>
+    <span class="title">Past Speakers</span>
     <div class="gallery">
       <div class="gallery-container">
-        
-          <img src="./output_images/page_21_image_2.png" alt="" class="gallery-item gallery-item-1" >
-        
+
+        <img src="./output_images/page_21_image_2.png" alt="" class="gallery-item gallery-item-1">
+
         <img src="./output_images/page_21_image_3.png" alt="" class="gallery-item gallery-item-2">
         <img src="./output_images/page_21_image_4.png" alt="" class="gallery-item gallery-item-3">
         <img src="./output_images/page_21_image_5.png" alt="" class="gallery-item gallery-item-4">
@@ -119,75 +153,57 @@
 
   <section class="Speakers" id="events">
     <span class="title">Events</span>
-    <div class="speak">
-      <a class="speaker" href="uxplorer.html">
-        <div class="overlay">UXplorer</div>
-      </a>
-      <a class="speaker" href="pitcher.html">
-        <div class="overlay">Pitchers 4.0</div>
-      </a>
-      <a class="speaker" href="iplauction.html">
-        <div class="overlay">IPL Auction</div>
-      </a>
-      <a class="speaker" href="sellathon.html">
-        <div class="overlay">Sellathon</div>
-      </a>
-      <a class="speaker" href="marketwise.html">
-        <div class="overlay">Market Wise</div>
-      </a>
-      <a class="speaker" href="maximize.html">
-        <div class="overlay">Maximise</div>
-      </a>
-    </div>
+    <iframe src="caro.html" frameborder="0"></iframe>
   </section>
   
+
   <section class="event-timeline" id="event-timeline">
     <h1>Events Timeline</h1>
     <div class="timeline">
-     <div class="container left-container">
-       <img src="a.png" alt="">
-       <div class="textbox ">
-         <h2>Pitch Perfect</h2> 
-         <small>5-April,</small>
-         <small>11:00am - 1:00pm</small>
-         <span class="right-container-arrow"></span>
-       </div>
-       
-     </div>
+      <div class="container left-container">
+        <img src="a.png" alt="">
+        <div class="textbox ">
+          <h2>Pitch Perfect</h2>
+          <small>5-April,</small>
+          <small>11:00am - 1:00pm</small>
+          <span class="right-container-arrow"></span>
+        </div>
 
-     <div class="container right-container">
-      <img src="a.png" alt="">
-      <div class="textbox">
-        <h2>Pitch Perfect</h2> 
-        <small>5-April,</small>
-        <small>11:00am - 1:00pm</small>
-        <span class="left-container-arrow"></span>
       </div>
-      
-    </div>
 
-    <div class="container left-container">
-      <img src="a.png" alt="">
-      <div class="textbox">
-        <h2>Pitch Perfect</h2> 
-        <small>5-April,</small>
-        <small>11:00am - 1:00pm</small>
-        <span class="right-container-arrow"></span>
-      </div>
-      
-    </div>
+      <div class="container right-container">
+        <img src="a.png" alt="">
+        <div class="textbox">
+          <h2>Pitch Perfect</h2>
+          <small>5-April,</small>
+          <small>11:00am - 1:00pm</small>
+          <span class="left-container-arrow"></span>
+        </div>
 
-    <div class="container right-container">
-      <img src="a.png" alt="">
-      <div class="textbox">
-        <h2>Pitch Perfect</h2> 
-        <small>5-April,</small>
-        <small>11:00am - 1:00pm</small>
-        <span class="left-container-arrow"></span>
       </div>
-      
+
+      <div class="container left-container">
+        <img src="a.png" alt="">
+        <div class="textbox">
+          <h2>Pitch Perfect</h2>
+          <small>5-April,</small>
+          <small>11:00am - 1:00pm</small>
+          <span class="right-container-arrow"></span>
+        </div>
+
+      </div>
+
+      <div class="container right-container">
+        <img src="a.png" alt="">
+        <div class="textbox">
+          <h2>Pitch Perfect</h2>
+          <small>5-April,</small>
+          <small>11:00am - 1:00pm</small>
+          <span class="left-container-arrow"></span>
+        </div>
+
+      </div>
     </div>
-  </div>
   </section>
 
   <footer class="contact-section" id="connect">
@@ -201,30 +217,42 @@
           <div class="credits">
             <h1>PRESENTED BY:</h1>
             <h2>Udyam, Ecell, IIITN</h2>
+            <div class="imp-icons1">
+              <img src="IIIT Nagpur.png" alt="">
+              <img src="iic2.png" alt="">
+              <img src="logoecell.png" alt="">
+            </div>
           </div>
         </div>
         <div class="contact-info">
           <div class="queries">
             <h1>Technical Queries At:</h1>
-            <h2>udyam@iiitn.ac.in</h2>
+            <h2><a href="tel:+919136754076" style="text-decoration: none; color: #fff;"><i class="uil uil-phone"></i>&nbspCorporate Lead</a></h2>
+            <h2><a href="tel:+919175713191" style="text-decoration: none; color: #fff;"><i class="uil uil-phone"></i>&nbspPR Lead</a></h2>
           </div>
           <div class="connect">
             <h1>Connect With Us:</h1>
             <h2>
-              <a href="https://www.instagram.com/ecell_iiitn?igsh=MThoZ2VibmxibzhuaQ=="><i class="uil uil-instagram"></i></a>
-      
-              <a href="https://www.linkedin.com/in/ecell-iiitn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="uil uil-linkedin"></i></a>
+              <a href="https://www.instagram.com/ecell_iiitn?igsh=MThoZ2VibmxibzhuaQ=="><i
+                  class="uil uil-instagram"></i></a>
+
+              <a
+                href="https://www.linkedin.com/in/ecell-iiitn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                  class="uil uil-linkedin"></i></a>
               <a href="mailto:udyam@iiitn.ac.in"><i class="uil uil-envelope"></i></a>
             </h2>
           </div>
         </div>
       </div>
-
+      
+      
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.0643924249935!2d79.02379987502918!3d20.949929080679713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0529518230f%3A0x45b76be0621cbb88!2sIndian%20Institute%20of%20Information%20Technology%2C%20Nagpur%20(IIITN)!5e0!3m2!1sen!2sin!4v1707683924242!5m2!1sen!2sin"
           width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>Permanent Address: Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari Soot Girni, Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra- 441108</p>
+          
       </div>
     </div>
   </footer>
