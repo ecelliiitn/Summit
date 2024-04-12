@@ -41,6 +41,7 @@ body {
   align-items: center;
   right: 273px;
   top: 430px;
+  
 }
 
 
@@ -51,7 +52,7 @@ body {
   height: 200px;
   pointer-events: none;
   mix-blend-mode: hard-light;
-
+  
 }
 
 

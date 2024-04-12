@@ -7,24 +7,129 @@
   <title>Turn Image In To An Animation - Using HTML & CSS Only</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <style>
+    .speaker{
+        opacity: 1;
+        contain: content;
+        
+    }
+    #sp {
+        margin-top: -200px;
+
+    }
+   
+    .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  display: inline;
+  background-color: rgb(52, 68, 107);
+}
+.speaker:nth-child(n):hover .overlay {
+  opacity: 1;
+}
+.box-2 .btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+/* Button Two */
+.box-2 .btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+}
+.box-2 .btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+}
+.box-2 .btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.box-2 .btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.box-2 .btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.box-2 .btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+.box-2 .btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 100px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 20px;
+  position: relative; /* Added position relative to .btn */
+}
+
+/* Button Two */
+.box-2 .btn-two {
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative; 
+}
+.box-2 .btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  top: 0; /* Added to position the text properly */
+  left: 0; /* Added to position the text properly */
+}
+  </style>
 </head>
 
 <body>
 
   <!--<img class="bulb" src="bulb-structure.png" alt="">-->
 
-  <div class="loading-animation">
-    <!-- <video autoplay loop muted>
-      <source src="A.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video> -->
-    <div class="load-main">
-    <img src="logoecell.png" alt="E-cell Logo">
-  </div>
-    <div class="loading-text">Loading...</div>
-  </div>
+ 
 
-  <header>
+  <!-- <header>
     <div class="nav-bar">
       <img
         src="logoecell.png"
@@ -37,181 +142,55 @@
           <a href="#Speakers"><i class="uil uil-info-circle"></i> Speakers</a>
           <a href="#events"><i class="uil uil-document-layout-left"></i> Events</a>
           <a href="#event-timeline"><i class="uil uil-envelope"></i> Timeline</a>
-          <a href="Blog1.html"><i class="uil uil-envelope"></i> Blogs</a>
+          <a href="Blog.html"><i class="uil uil-envelope"></i> Blogs</a>
           <a href="Sponsor.html"><i class="uil uil-envelope"></i> Sponsor</a>
           <a href="#connect"><i class="uil uil-envelope"></i> Contact</a>
+          
+
         </div>
       </div>
       <i class="uil uil-apps nav-menu-btn"></i>
     </div>
-  </header>
+  </header> -->
+
   <div id="tsparticles">
     <canvas data-generated="true"
       style="width: 100% !important; height: 100% !important; position: fixed !important; z-index: -1 !important; top: 0px !important; left: 0px !important; pointer-events: none; background-color: rgb(0, 0, 0);"
       aria-hidden="true" width="1137" height="1072"></canvas>
   </div>
-  <section class="home" id="home">
 
-    <div class="media-icons">
-      <a href="#"><i class="uil uil-facebook-f"></i></a>
-      <a href="#"><i class="uil uil-instagram"></i></a>
-      <a href="#"><i class="uil uil-twitter"></i></a>
-      <a href="#"><i class="uil uil-linkedin"></i></a>
-      <a href="#"><i class="uil uil-envelope"></i></a>
-    </div>
-
-    <div class="text-content">
-      <img src="esummitlogo.png" alt="esummitlogo">
-   </div>
-  
-  </section>
-
-  <!-- <div class="img-container">
-    <img class="cap" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cap.png" alt="">
-    <img class="cog-01" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-01.png"
-      alt="">
-    <img class="cog-02" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-02.png"
-      alt="">
-    <img class="cog-03" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-03.png"
-      alt="">
-    <img class="cog-04" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-04.png"
-      alt="">
-    <img class="cog-05" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-05.png"
-      alt="">
-    <img class="cog-06" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-06.png"
-      alt="">
-    <img class="cog-07" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-07.png"
-      alt="">
-    <img class="cog-08" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-08.png"
-      alt="">
-    <img class="cog-09" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-09.png"
-      alt="">
-    <img class="cog-10" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-10.png"
-      alt="">
-    <img class="cog-11" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-11.png"
-      alt="">
-    <img class="cog-12" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-12.png"
-      alt="">
-    <img class="cog-13" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-13.png"
-      alt="">
-    <img class="cog-14" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-14.png"
-      alt="">
-    <img class="cog-15" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-15.png"
-      alt="">
-    <img class="cog-16" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-16.png"
-      alt="">
-    <img class="cog-17" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-17.png"
-      alt="">
-    <img class="cog-18" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-18.png"
-      alt="">
-    <img class="cog-19" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-19.png"
-      alt="">
-    <img class="cog-20" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-20.png"
-      alt="">
-    <img class="cog-21" src="D:\Summit\Image files - Turn Image In to an Animation - Using HTML & CSS Only\cog-21.png"
-      alt="">
-  </div> -->
-
-  <div color="gray" class="line"></div>
-
-  <section class="about-section" id="about">
-    <div class="about-us">
-      <h2>About &nbsp Esummit</h2>
-      <p class="content">"E-Summit, the flagship event of IIIT Nagpur, symbolizes the collective ambition and dedication of E-Cell IIIT Nagpur and the esteemed Innovation Council Club. This annual gathering serves as a beacon of inspiration, igniting the flames of innovation and entrepreneurship among attendees. Through thought-provoking keynote speeches, interactive panel discussions, and hands-on workshops, participants are not only equipped with the tools and knowledge needed to navigate the dynamic landscape of entrepreneurship but are also encouraged to push boundaries, embrace failure as a stepping stone to success, and dream big. Moreover, E-Summit serves as a testament to our commitment to fostering an inclusive and diverse ecosystem where individuals from all backgrounds are empowered to pursue their entrepreneurial aspirations and contribute meaningfully to the advancement of society."</p>
-    </div>
-
-  </section>
-
-  <div color="gray" class="line"></div>
-
-  <Section class="guests" id="Speakers">
-    <span class="title">Speakers</span>
-    <div class="gallery">
-      <div class="gallery-container">
-        <img src="a.png" alt="" class="gallery-item gallery-item-1" >
-        <img src="p.jpg" alt="" class="gallery-item gallery-item-2">
-        <img src="q.jpg" alt="" class="gallery-item gallery-item-3">
-        <img src="r.jpg" alt="" class="gallery-item gallery-item-4">
-        <img src="a.png" alt="" class="gallery-item gallery-item-5">
+  <div class="box-2">
+    <a href="index.html">
+      <div class="btn btn-two">
+        <span>Back</span>
       </div>
-      <div class="gallery-controls"></div>
-    </div>
-  </Section>
-
-  <div color="gray" class="line"></div>
-
-  <section class="Speakers" id="events">
-    <span class="title">Events</span>
-    <div class="speak">
-      <a class="speaker" href="">
-        <div class="overlay">UXplorer</div>
-      </a>
-      <a class="speaker">
-        <div class="overlay">Pitchers 4.0</div>
-      </a>
-      <a class="speaker">
-        <div class="overlay">IPL Auction</div>
-      </a>
-      <a class="speaker">
-        <div class="overlay">Sellathon</div>
-      </a>
-      <a class="speaker">
-        <div class="overlay">Market Wise</div>
-      </a>
-      <a class="speaker" href="">
-        <div class="overlay">Maximise</div>
-      </a>
-    </div>
-  </section>
-  
-  <section class="event-timeline" id="event-timeline">
-    <h1>Events Timeline</h1>
-    <div class="timeline">
-     <div class="container left-container">
-       <img src="a.png" alt="">
-       <div class="textbox ">
-         <h2>Pitch Perfect</h2> 
-         <small>5-April,</small>
-         <small>11:00am - 1:00pm</small>
-         <span class="right-container-arrow"></span>
-       </div>
-       
-     </div>
-
-     <div class="container right-container">
-      <img src="a.png" alt="">
-      <div class="textbox">
-        <h2>Pitch Perfect</h2> 
-        <small>5-April,</small>
-        <small>11:00am - 1:00pm</small>
-        <span class="left-container-arrow"></span>
-      </div>
-      
-    </div>
-
-    <div class="container left-container">
-      <img src="a.png" alt="">
-      <div class="textbox">
-        <h2>Pitch Perfect</h2> 
-        <small>5-April,</small>
-        <small>11:00am - 1:00pm</small>
-        <span class="right-container-arrow"></span>
-      </div>
-      
-    </div>
-
-    <div class="container right-container">
-      <img src="a.png" alt="">
-      <div class="textbox">
-        <h2>Pitch Perfect</h2> 
-        <small>5-April,</small>
-        <small>11:00am - 1:00pm</small>
-        <span class="left-container-arrow"></span>
-      </div>
-      
-    </div>
+    </a>
   </div>
+
+  <section class="Speakers" id="sp">
+    <span class="title">Past Sponsor</span>
+    <div class="speak">
+        <div class="speaker" style="background-image: url('sp1.jpg');">
+            <div class="overlay">Synoriq</div>
+          </div>
+          
+          <div class="speaker" style="background-image: url('sp2.jpg');">
+            <div class="overlay">Western Coalfields Limited </div>
+          </div>
+          <div class="speaker" style="background-image: url('sp333.jpg');">
+            <div class="overlay">Tsecond</div>
+          </div>
+          <div class="speaker" style="background-image: url('sp4.jpg');">
+            <div class="overlay">SimpliClarify</div>
+          </div>
+          <div class="speaker" style="background-image: url('sp5.jpg');">
+            <div class="overlay">StockGro</div>
+          </div>
+          <div class="speaker" style="background-image: url('sp6.jpg');">
+            <div class="overlay">D2C</div>
+          </div>
   </section>
+ 
 
   <footer class="contact-section" id="connect">
     <div class="csm">
