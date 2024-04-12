@@ -153,13 +153,22 @@ body > .container {
 
 .contact-box {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+}
+
+.contact-box> div{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: #160f22;
 }
 
 .organizer-info{
@@ -187,12 +196,17 @@ body > .container {
   transform: scale(1.1);
 }
 
-
+a{
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+ padding: 0;
+}
 .social-links a{
   text-decoration: none;
   color: #ccc8d4;
   font-size: 2rem;
-  padding: 10px 15px;
+  padding: 5px 10px;
   border: 1px solid white;
   border-radius: 10px;
   margin: 0 15px;
@@ -238,11 +252,11 @@ body > .container {
   border-radius: 30px;
 }
 .left-container{
-  left:-25%;
+  left:-15%;
 }
 
 .right-container{
-  left: 25%;
+  left: 15%;
 }
 
 
