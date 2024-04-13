@@ -162,9 +162,9 @@ body > .container {
 }
 
 .contact-box> div{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid;
     border-radius: 5px;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -252,11 +252,11 @@ a{
   border-radius: 30px;
 }
 .left-container{
-  left:-15%;
+  left:-20%;
 }
 
 .right-container{
-  left: 15%;
+  left: 20%;
 }
 
 

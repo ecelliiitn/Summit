@@ -10,15 +10,26 @@ closebtn.addEventListener("click", () => {
   navigation.classList.remove("active");
 });
 
-const text = document.querySelector(".text-content");
-window.addEventListener("load", () => {
-  text.classList.add("text-active");
+// const text = document.querySelector(".text-content");
+// window.addEventListener("load", () => {
+//   text.classList.add("text-active");
+// });
+
+window.addEventListener('DOMContentLoaded', function() {
+  var hasAnimationPlayed = sessionStorage.getItem('hasAnimationPlayed');
+  
+  if (!hasAnimationPlayed) {
+      // Perform the animation if it hasn't been played before
+      setTimeout(function() {
+          document.querySelector('.loading-animation').style.display = 'none';
+      }, 4000);
+      // Set a flag in sessionStorage to indicate that the animation has been played
+      sessionStorage.setItem('hasAnimationPlayed', true);
+  } else {
+      // If the animation has been played before, hide the loading animation immediately
+      document.querySelector('.loading-animation').style.display = 'none';
+  }
 });
-
-setTimeout(function () {
-  document.querySelector('.loading-animation').style.display = 'none';
-
-}, 4000);
 
 
 

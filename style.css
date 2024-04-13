@@ -318,7 +318,7 @@ section {
 }
 
 .about-section {
-  color: #000;
+  color: #fff;
   padding: 165px ;
   transition: 0.3 ease;
   min-height: 100vh;
@@ -353,18 +353,26 @@ section {
 }
 
 #about1 .about-us{
+  background-image: url('aboutiic1.png');
+  background-size: cover; 
+}
+#about2 .about-us{
+  background-image: url('aboutiic.jpg');
+  background-size: cover; 
+}
+#about3 .about-us{
   background-image: url('aboutiic.png');
-  background-size: cover;
-  
+  background-size: cover; 
 }
 
 .about-section .about-us h2 {
-  font-size: 2.3em;
+  font-size: 55px;
   padding-bottom: 30px;
   font-weight: 700;
-  color: #3b5378;
-  font-style: italic;
+  color: #3555a6;
   z-index: 99;
+  font-family: 'Poppins';
+  text-shadow: 2px 2px 2px #fff9f9;
 }
 
 .about-section .about-us p {
@@ -588,6 +596,11 @@ section {
   background-color: #091426;
   
 }
+@media screen and (max-width:766px){
+  #events iframe{
+    height: 500px;
+  }
+}
 /* @media screen and (max-width:940px){
   .speaker:nth-child(1){
     animation-delay: 0s;
@@ -624,16 +637,17 @@ section {
 }
 
 .Speakers .title {
-  color: var(--navigation-item-hover-color);
-  font-size: 2.4em;
-  font-weight: 300;
   cursor: pointer;
   position: relative;
   display: inline-block;
   margin-top: 200px;
-  font-family: "Orbitron";
-  font-style: italic;
-  font-weight: 500;
+  font-size: 55px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  color: #3555a6;
+  z-index: 99;
+  font-family: 'Poppins';
+  text-shadow: 2px 2px 2px #fff9f9;
 }
 
 .Speakers .title::before {
@@ -883,16 +897,18 @@ iframe{
   contain: content;
 }
 
-.guests .title {
-  color: var(--navigation-item-hover-color);
-  font-size: 2.4em;
-  font-weight: 600;
+.guests .title {  
   cursor: pointer;
   position: relative;
   display: inline-block;
   margin: 50px 0;
-  font-family: "Orbitron";
-  font-style: italic;
+  font-size: 55px;
+  
+  font-weight: 700;
+  color: #3555a6;
+  z-index: 99;
+  font-family: 'Poppins';
+  text-shadow: 2px 2px 2px #fff9f9;
 }
 
 .gallery-container{
@@ -1089,10 +1105,13 @@ iframe{
 }
 .event-timeline h1{
   text-align: center;
-  font-size: 2.4rem;
-  color: var(--navigation-item-hover-color);
-  font-family: "Orbitron";
-  font-style: italic;
+  font-size: 55px;
+  padding-bottom: 30px;
+  font-weight: 700;
+  color: #3555a6;
+  z-index: 99;
+  font-family: 'Poppins';
+  text-shadow: 2px 2px 2px #fff9f9;
 }
 
 .timeline{
@@ -1126,13 +1145,22 @@ iframe{
   animation-delay: 0s;
 }
 .timeline .container:nth-child(2){
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 .timeline .container:nth-child(3){
-  animation-delay: 2s;
+  animation-delay: 1.6s;
 }
 .timeline .container:nth-child(4){
-  animation-delay: 3s;
+  animation-delay: 2.4s;
+}
+.timeline .container:nth-child(5){
+  animation-delay: 3.2s;
+}
+.timeline .container:nth-child(6){
+  animation-delay: 4.0s;
+}
+.timeline .container:nth-child(7){
+  animation-delay: 4.8s;
 }
 
 
