@@ -16,6 +16,7 @@
 
   .responsive-cell-block {
     min-height: 75px;
+    /* padding: 0 70px; */
   }
 
   .text-blk {
@@ -33,6 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
   }
 
   .team-head-text {
@@ -84,7 +86,8 @@
     margin-right: 15px;
     margin-bottom: 50px;
     margin-left: 15px;
-    background-color: rgba(90, 113, 176, 0.623);
+    background-color: rgb(90, 113, 176);
+    
   }
 
   .name {
@@ -458,6 +461,18 @@
     left: 0;
     /* Added to position the text properly */
   }
+
+  .team-head-text{
+    text-align: center;
+  font-size: 55px;
+  padding-bottom: 100px;
+  font-weight: 700;
+  color: #3555a6;
+  z-index: 99;
+  font-family: 'Poppins';
+  text-shadow: 2px 2px 2px #fff9f9;
+  padding-top: 100px;
+  }
 </style>
 
 <body>
@@ -505,7 +520,7 @@
 
   <div class="responsive-container-block container">
     <p class="text-blk team-head-text">
-      Faculty
+      Authorities
     </p>
 
    
@@ -555,15 +570,15 @@
             <img class="team-member-image" src="mayur.jpg">
           </div>
           <p class="text-blk name">
-            Mayur Parate
+            Dr. Mayur Parate
           </p>
           <p class="text-blk position">
             Associate dean
           </p>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/mayur-parate-66727b6a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <!-- <a href="https://www.linkedin.com/in/mayur-parate-66727b6a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
               <img class="twitter-icon" src="linked.svg">
-            </a>
+            </a> -->
            <a href="mailto:mparate@iiitn.ac.in" target="_blank">
               <img class="facebook-icon" src="mail.svg">
             </a>
@@ -576,15 +591,15 @@
             <img class="team-member-image" src="aatish.jpg">
           </div>
           <p class="text-blk name">
-           Aatish Daryapurkar
+           Dr. Aatish Daryapurkar
           </p>
           <p class="text-blk position">
             IIC Convener
           </p>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/dr-aatish-daryapurkar-2b277550?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <!-- <a href="https://www.linkedin.com/in/dr-aatish-daryapurkar-2b277550?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
               <img class="twitter-icon" src="linked.svg">
-            </a>
+            </a> -->
            <a href="mailto:asdaryapurkar@iiitn.ac.in" target="_blank">
               <img class="facebook-icon" src="mail.svg">
             </a>
@@ -597,11 +612,11 @@
 
     <div class="responsive-container-block container">
       <p class="text-blk team-head-text">
-        Our Team
+        <u>Our Team</u>
       </p>
 
       <p class="text-blk team-head-text">
-        Heads
+        Leads
       </p>
       <div class="responsive-container-block">
         <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
@@ -654,7 +669,7 @@
 
       <div class="responsive-container-block container">
         <p class="text-blk team-head-text">
-          OC'S Leads
+          Organizing Committee
         </p>
         <div class="responsive-container-block">
           <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
@@ -667,7 +682,7 @@
                 Sarvesh Bajaj
               </p>
               <p class="text-blk position">
-                WebDev
+                Web and Technical
               </p>
 
               <div class="social-icons">
@@ -675,6 +690,29 @@
                   <img class="twitter-icon" src="linked.svg">
                 </a>
                <a href="mailto:bt22cse087@iiitn.ac.in" target="_blank">
+                  <img class="facebook-icon" src="mail.svg">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
+            <div class="card">
+              <div class="team-image-wrapper">
+                <img class="team-member-image"
+                  src="kush.jpg">
+              </div>
+              <p class="text-blk name">
+                Kushagra Srivastava
+              </p>
+              <p class="text-blk position">
+                Web and Technical <br> | Content
+              </p>
+
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/kushagra-srivastava-32690b250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                  <img class="twitter-icon" src="linked.svg">
+                </a>
+               <a href="mailto:bt22cse139@iiitn.ac.in" target="_blank">
                   <img class="facebook-icon" src="mail.svg">
                 </a>
               </div>
@@ -701,29 +739,7 @@
               </div>
             </div>
           </div>
-          <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
-            <div class="card">
-              <div class="team-image-wrapper">
-                <img class="team-member-image"
-                  src="kush.jpg">
-              </div>
-              <p class="text-blk name">
-                Kushagra Srivastava
-              </p>
-              <p class="text-blk position">
-                WebDev | Content
-              </p>
-
-              <div class="social-icons">
-                <a href="https://www.linkedin.com/in/kushagra-srivastava-32690b250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                  <img class="twitter-icon" src="linked.svg">
-                </a>
-               <a href="mailto:bt22cse139@iiitn.ac.in" target="_blank">
-                  <img class="facebook-icon" src="mail.svg">
-                </a>
-              </div>
-            </div>
-          </div>
+          
           <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
             <div class="card">
               <div class="team-image-wrapper">
@@ -751,25 +767,26 @@
             <div class="card">
               <div class="team-image-wrapper">
                 <img class="team-member-image"
-                  src="geetansh.jpg">
+                  src="aahil.jpg">
               </div>
               <p class="text-blk name">
-                Geetansh Yadav 
+                Aahil Parkar
               </p>
               <p class="text-blk position">
-                EM
+                Corporate
               </p>
 
               <div class="social-icons">
-                <a href="https://www.linkedin.com/in/geetansh-yadav-ba7361259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <a href="https://www.linkedin.com/in/aahil-parkar-446012262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                   <img class="twitter-icon" src="linked.svg">
                 </a>
-               <a href="mailto:bt22csa035@iiitn.ac.in" target="_blank">
+               <a href="mailto:bt22cse218@iiitn.ac.in" target="_blank">
                   <img class="facebook-icon" src="mail.svg">
                 </a>
               </div>
             </div>
           </div>
+  
           <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
             <div class="card">
               <div class="team-image-wrapper">
@@ -839,29 +856,7 @@
               </div>
             </div>
           </div>
-          <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
-            <div class="card">
-              <div class="team-image-wrapper">
-                <img class="team-member-image"
-                  src="aahil.jpg">
-              </div>
-              <p class="text-blk name">
-                Aahil Parkar
-              </p>
-              <p class="text-blk position">
-                Corporate
-              </p>
-
-              <div class="social-icons">
-                <a href="https://www.linkedin.com/in/aahil-parkar-446012262?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                  <img class="twitter-icon" src="linked.svg">
-                </a>
-               <a href="mailto:bt22cse218@iiitn.ac.in" target="_blank">
-                  <img class="facebook-icon" src="mail.svg">
-                </a>
-              </div>
-            </div>
-          </div>
+       
           <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
             <div class="card">
               <div class="team-image-wrapper">
@@ -902,6 +897,29 @@
                   <img class="twitter-icon" src="linked.svg">
                 </a>
                <a href="mailto:bt22cse027@iiitn.ac.in" target="_blank">
+                  <img class="facebook-icon" src="mail.svg">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
+            <div class="card">
+              <div class="team-image-wrapper">
+                <img class="team-member-image"
+                  src="geetansh.jpg">
+              </div>
+              <p class="text-blk name">
+                Geetansh Yadav 
+              </p>
+              <p class="text-blk position">
+                EM
+              </p>
+
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/geetansh-yadav-ba7361259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                  <img class="twitter-icon" src="linked.svg">
+                </a>
+               <a href="mailto:bt22csa035@iiitn.ac.in" target="_blank">
                   <img class="facebook-icon" src="mail.svg">
                 </a>
               </div>
@@ -953,6 +971,7 @@
               </div>
             </div>
           </div>
+          
           <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
             <div class="card">
               <div class="team-image-wrapper">
@@ -961,6 +980,28 @@
               </div>
               <p class="text-blk name">
                Vidit Prakash
+              </p>
+              <p class="text-blk position">
+                Anchor
+              </p>
+
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/vidit-prakash-a10280259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                  <img class="twitter-icon" src="linked.svg">
+                </a>
+               <a href="mailto:bt22ece063@iiitn.ac.in" target="_blank">
+                  <img class="facebook-icon" src="mail.svg">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="responsive-cell-block wk-desk-2 wk-ipadp-2 wk-tab-6 wk-mobile-12 card-container">
+            <div class="card">
+              <div class="team-image-wrapper">
+                <img class="team-member-image" src="rudra.jpg">
+              </div>
+              <p class="text-blk name">
+               Rudra Mishra
               </p>
               <p class="text-blk position">
                 Anchor
@@ -1132,20 +1173,26 @@
                   </div>
                   <div class="credits">
                     <h1>PRESENTED BY:</h1>
-                    <h2>Udyam, Ecell, IIITN</h2>
+                    <h2>Udyam, E-cell, IIITN</h2>
+                    <div class="imp-icons1">
+                      <img src="IIIT Nagpur.png" alt="">
+                      <img src="iic2.png" alt="">
+                      <img src="logoecell.png" alt="">
+                    </div>
                   </div>
                 </div>
                 <div class="contact-info">
                   <div class="queries">
                     <h1>Technical Queries At:</h1>
-                    <h2>udyam@iiitn.ac.in</h2>
+                    <h2><a href="tel:+919136754076" style="text-decoration: none; color: #fff;"><i class="uil uil-phone"></i>&nbspCorporate Lead</a></h2>
+                    <h2><a href="tel:+919175713191" style="text-decoration: none; color: #fff;"><i class="uil uil-phone"></i>&nbspPR Lead</a></h2>
                   </div>
                   <div class="connect">
                     <h1>Connect With Us:</h1>
                     <h2>
                       <a href="https://www.instagram.com/ecell_iiitn?igsh=MThoZ2VibmxibzhuaQ=="><i
                           class="uil uil-instagram"></i></a>
-
+        
                       <a
                         href="https://www.linkedin.com/in/ecell-iiitn?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
                           class="uil uil-linkedin"></i></a>
@@ -1154,12 +1201,15 @@
                   </div>
                 </div>
               </div>
-
+              
+              
               <div class="map-container">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.0643924249935!2d79.02379987502918!3d20.949929080679713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0529518230f%3A0x45b76be0621cbb88!2sIndian%20Institute%20of%20Information%20Technology%2C%20Nagpur%20(IIITN)!5e0!3m2!1sen!2sin!4v1707683924242!5m2!1sen!2sin"
                   width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <p>Permanent Address: Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari Soot Girni, Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra- 441108</p>
+                  
               </div>
             </div>
           </footer>

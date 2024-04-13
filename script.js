@@ -35,19 +35,29 @@ window.addEventListener('DOMContentLoaded', function() {
 
 document.querySelectorAll('.nav-items a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    //e.preventDefault();
+  
+    // Prevent default link behavior
 
+    // Get the ID of the target section
     const targetId = this.getAttribute('href').substring(1);
+
+    // Find the target element by ID
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
+      // Calculate the scroll position, considering any fixed headers
+      const headerHeight = document.querySelector('.title').offsetHeight; // Adjust this selector as needed
+      const scrollPosition = targetElement.offsetTop - headerHeight;
+
+      // Scroll to the target section with smooth behavior
       window.scrollTo({
-        top: targetElement.offsetTop,
+        top: scrollPosition,
         behavior: 'smooth'
       });
     }
   });
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -128,7 +138,7 @@ class Carousel {
     this.carouselControls.forEach(control => {
       const button = document.createElement('button');
       button.className = `gallery-controls-${control}`;
-      button.innerText = control;
+      button.innerText ;
       galleryControlsContainer.appendChild(button);
     });
   }
@@ -156,6 +166,24 @@ exampleCarousel.useControls();
 toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it

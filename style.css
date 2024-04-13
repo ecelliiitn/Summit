@@ -999,18 +999,18 @@ iframe{
 }
 
 .gallery-controls-previous::before{
-  border: solid #3b5378;
-  border-width: 0 5px 5px 0;
+  border: solid  #3d72c2;
+  border-width: 0 10px 10px 0;
   content: '';
   display: inline-block;
-  height: 5px;
+  height: 15px;
   left: -30px;
   padding: 10px;
   position: absolute;
-  top: 25%;
+  top: 15%;
   transform: rotate(135deg) translateY(-50%);
   transition: left 0.15s ease-in-out;
-  width: 5px;
+  width: 15px;
 }
 .gallery-controls-previous:hover::before{
   left: -40px;
@@ -1019,18 +1019,18 @@ iframe{
   position: relative;
 }
 .gallery-controls-next::before{
-  border: solid #3b5378;
-  border-width: 0 5px 5px 0;
+  border: solid #3d72c2;
+  border-width: 0 10px 10px 0;
   content: '';
   display: inline-block;
-  height: 5px;
+  height: 15px;
   padding: 10px;
   position: absolute;
   right: -30px;
   top: 45%;
   transform: rotate(-45deg) translateY(-50%);
   transition: left 0.15s ease-in-out;
-  width: 5px;
+  width: 15px;
 }
 .gallery-controls-next:hover::before{
   right: -40px;
