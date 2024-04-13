@@ -341,14 +341,14 @@ section {
   border: 1px solid var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
-  width: 80%;
+  width: 85%;
   border-radius: 5px;
   padding: 30px 50px;
   /* right: 200px; */
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 50%;
+  height: 70%;
   overflow-y: scroll;
 }
 
@@ -373,6 +373,7 @@ section {
   z-index: 99;
   font-family: 'Poppins';
   text-shadow: 2px 2px 2px #fff9f9;
+  text-align: center;
 }
 
 .about-section .about-us p {
@@ -381,7 +382,13 @@ section {
   font-family: "Kode Mono";
   opacity: 1;
 }
-
+@media screen and (max-width : 733px){
+  .about-section .about-us {
+    width: 95%;
+    padding: 30px 10px;
+    height: 80%;
+  }
+}
 /* @media screen and (max-width : 1350px) {
 
   .img-container {
@@ -474,7 +481,7 @@ section {
     left: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     visibility: hidden;
     opacity: 0;
     transition: 0.3s ease;
@@ -483,7 +490,6 @@ section {
   .navigation.active {
     visibility: visible;
     opacity: 1;
-    backdrop-filter: blur(10px);
   }
 
   .navigation .nav-items {
@@ -506,8 +512,8 @@ section {
   }
 
   .navigation .nav-items a {
-    color: var(--dark-color);
-    font-size: 1.2rem;
+    color: var(--white-color);
+    font-size: 1.5rem;
     margin: 15px 0;
   }
 
@@ -890,6 +896,7 @@ iframe{
   align-items: center;
   position: relative;
   min-height: 100vh;
+  text-align: center;
 }
 
 .gallery{
@@ -1073,6 +1080,12 @@ iframe{
   .contact-info .connect{
     margin: 50px 0;
     padding-left: 35px;
+  }
+  .container{
+    padding: 0;
+  }
+  .contact-section{
+    padding: 50px 0;
   }
 }
 

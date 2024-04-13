@@ -35,10 +35,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
 document.querySelectorAll('.nav-items a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-  
-    // Prevent default link behavior
+    const href = this.getAttribute('href');
+    const isLastThreeSections = href === 'Blog1.html' || href === 'contact.html' || href === 'Sponsor.html';
 
+    // Prevent default behavior only if the anchor is not for the last three sections
+    if (!isLastThreeSections) {
+      e.preventDefault();
+    }
     // Get the ID of the target section
+    
     const targetId = this.getAttribute('href').substring(1);
 
     // Find the target element by ID
