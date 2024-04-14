@@ -4,10 +4,22 @@ const navigation = document.querySelector(".navigation");
 
 menubtn.addEventListener("click", () => {
   navigation.classList.add("active");
-});
+  // Check if the element exists before applying the backdrop-filter property
+  const navBar = document.querySelector('header .nav-bar');
+  if (navBar) {
+    // Apply the backdrop-filter property
+    navBar.style.backdropFilter = 'none';
+  }
+ });
 
 closebtn.addEventListener("click", () => {
   navigation.classList.remove("active");
+   // Check if the element exists before applying the backdrop-filter property
+   const navBar = document.querySelector('header .nav-bar');
+   if (navBar) {
+     // Apply the backdrop-filter property
+     navBar.style.backdropFilter = 'blur(10px)';
+   }
 });
 
 // const text = document.querySelector(".text-content");
@@ -35,6 +47,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
 document.querySelectorAll('.nav-items a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    navigation.classList.remove("active");
+    // Check if the element exists before applying the backdrop-filter property
+   const navBar = document.querySelector('header .nav-bar');
+   if (navBar) {
+     // Apply the backdrop-filter property
+     navBar.style.backdropFilter = 'blur(10px)';
+   }
     const href = this.getAttribute('href');
     const isLastThreeSections = href === 'Blog1.html' || href === 'contact.html' || href === 'Sponsor.html';
 
@@ -51,8 +70,16 @@ document.querySelectorAll('.nav-items a').forEach(anchor => {
 
     if (targetElement) {
       // Calculate the scroll position, considering any fixed headers
-      const headerHeight = document.querySelector('.title').offsetHeight; // Adjust this selector as needed
+      let headerHeight = document.querySelector('.title').offsetHeight; // Adjust this selector as needed
+       // Check screen width
+       const screenWidth = window.innerWidth;
+
+       // Adjust header height based on screen width
+       if (screenWidth < 768) {
+         headerHeight -= 100; // Subtract 20 pixels for smaller screens
+       }
       const scrollPosition = targetElement.offsetTop - headerHeight;
+     
 
       // Scroll to the target section with smooth behavior
       window.scrollTo({
