@@ -240,13 +240,13 @@ a{
 
 .timeline .container .textbox{
    padding: 20px 30px;
-   background: #000000af;
+   background: #00000000;
    position: relative;
    border-radius: 6px;
    font-size: 15px;
    color: #fff;
    border: 2px solid lightblue;
-   box-shadow: 0 0 10px rgb(85, 212, 254);
+   box-shadow: 0 0 10px rgb(225, 125, 255);
    display: inline-block;
 }
 
