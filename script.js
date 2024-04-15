@@ -1,31 +1,53 @@
+const navigation = document.querySelector(".navigation");
+const navBar = document.querySelector('header .nav-bar');
 const menubtn = document.querySelector(".nav-menu-btn");
 const closebtn = document.querySelector(".nav-close-btn");
-const navigation = document.querySelector(".navigation");
+const navItems = document.querySelectorAll('.nav-items a');
 
-menubtn.addEventListener("click", () => {
-  navigation.classList.add("active");
-  // Check if the element exists before applying the backdrop-filter property
-  const navBar = document.querySelector('header .nav-bar');
+// Function to handle navigation state and backdrop filter
+function toggleNavigation(active, blur) {
+  navigation.classList.toggle("active", active);
   if (navBar) {
-    // Apply the backdrop-filter property
-    navBar.style.backdropFilter = 'none';
+    navBar.style.backdropFilter = blur ? 'blur(10px)' : 'none';
   }
- });
+}
 
-closebtn.addEventListener("click", () => {
-  navigation.classList.remove("active");
-   // Check if the element exists before applying the backdrop-filter property
-   const navBar = document.querySelector('header .nav-bar');
-   if (navBar) {
-     // Apply the backdrop-filter property
-     navBar.style.backdropFilter = 'blur(10px)';
-   }
+// Event listener for menu button
+menubtn.addEventListener("click", () => {
+  toggleNavigation(true, false);
 });
 
-// const text = document.querySelector(".text-content");
-// window.addEventListener("load", () => {
-//   text.classList.add("text-active");
-// });
+// Event listener for close button
+closebtn.addEventListener("click", () => {
+  toggleNavigation(false, true);
+});
+
+// Event listener for navigation links
+navItems.forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    toggleNavigation(false, true);
+    const href = this.getAttribute('href');
+    const isLastThreeSections = href === 'Blog1.html' || href === 'contact.html' || href === 'Sponsor.html';
+    if (!isLastThreeSections) {
+      e.preventDefault();
+    }
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      let headerHeight = document.querySelector('.title').offsetHeight;
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 768) {
+        headerHeight -= 100;
+      }
+      const scrollPosition = targetElement.offsetTop - headerHeight;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
 
 window.addEventListener('DOMContentLoaded', function() {
   var hasAnimationPlayed = sessionStorage.getItem('hasAnimationPlayed');
@@ -42,55 +64,6 @@ window.addEventListener('DOMContentLoaded', function() {
       document.querySelector('.loading-animation').style.display = 'none';
   }
 });
-
-
-
-document.querySelectorAll('.nav-items a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    navigation.classList.remove("active");
-    // Check if the element exists before applying the backdrop-filter property
-   const navBar = document.querySelector('header .nav-bar');
-   if (navBar) {
-     // Apply the backdrop-filter property
-     navBar.style.backdropFilter = 'blur(10px)';
-   }
-    const href = this.getAttribute('href');
-    const isLastThreeSections = href === 'Blog1.html' || href === 'contact.html' || href === 'Sponsor.html';
-
-    // Prevent default behavior only if the anchor is not for the last three sections
-    if (!isLastThreeSections) {
-      e.preventDefault();
-    }
-    // Get the ID of the target section
-    
-    const targetId = this.getAttribute('href').substring(1);
-
-    // Find the target element by ID
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      // Calculate the scroll position, considering any fixed headers
-      let headerHeight = document.querySelector('.title').offsetHeight; // Adjust this selector as needed
-       // Check screen width
-       const screenWidth = window.innerWidth;
-
-       // Adjust header height based on screen width
-       if (screenWidth < 768) {
-         headerHeight -= 100; // Subtract 20 pixels for smaller screens
-       }
-      const scrollPosition = targetElement.offsetTop - headerHeight;
-     
-
-      // Scroll to the target section with smooth behavior
-      window.scrollTo({
-        top: scrollPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const timeline = document.querySelector('.timeline');
@@ -194,40 +167,22 @@ exampleCarousel.useControls();
 
 
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+// Function to toggle dropdown visibility
+function toggleDropdown(dropdownId) {
+  var dropdown = document.getElementById(dropdownId);
+  dropdown.classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
+  // Check if the clicked element is not a dropbtn
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    // Iterate over dropdowns to close those that are open
+    Array.from(dropdowns).forEach(function(dropdown) {
+      if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
       }
-    }
+    });
   }
-}
-
-function myFunction1() {
-  document.getElementById("myDropdown1").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+};

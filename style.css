@@ -141,6 +141,9 @@ header .nav-bar {
 .navigation .nav-items > a i {
   display: none;
 }
+.navigation .nav-items > span i {
+  display: none;
+}
 
 .navigation .nav-items > a:not(:last-child) {
   margin-right: 45px;
@@ -204,7 +207,7 @@ header .nav-bar {
   /* max-width: 800px; */
   height: auto; /* Allow the height to adjust proportionally based on the width */
   mix-blend-mode:lighten; /* Apply mix-blend-mode to the image */
-  animation: blink 4s  4s infinite;
+  animation: blink 4s  infinite;
 }
 @keyframes blink {
   0%{
@@ -353,15 +356,15 @@ section {
 }
 
 #about1 .about-us{
-  background-image: url('aboutiic1.png');
+  background-image: url('images/aboutiic1.webp');
   background-size: cover; 
 }
 #about2 .about-us{
-  background-image: url('aboutiic.jpg');
+  background-image: url('images/aboutiic.webp');
   background-size: cover; 
 }
 #about3 .about-us{
-  background-image: url('aboutiic.png');
+  background-image: url('images/aboutiic2.webp');
   background-size: cover; 
 }
 
@@ -469,6 +472,7 @@ section {
     position: relative;
     left: 200px;
     width: 30px;
+    font-size: 2rem;
   }
 
   .navigation {
@@ -495,7 +499,8 @@ section {
 
   .navigation .nav-items {
     position: absolute;
-    background-color: rgba(65, 84, 119, 0.918);
+    background-color: rgb(53 107 204 / 92%);
+    border: 1px solid white;
     width: 350px;
     max-width: 400px;
     display: grid;
@@ -520,7 +525,16 @@ section {
 
   .navigation .nav-items a i {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+  .navigation .nav-items span i {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0 20px;
+  }
+  #myDropdown1{
+    transform: translate(150px,-180px);
   }
 }
 
@@ -750,12 +764,16 @@ section {
   font-size: 1.4rem;
   font-family: "Monoton";
   margin: 0 50px 100px 0;
+  border-bottom: 0.5px solid white;
+  padding-bottom: 20px;
 }
 
 .contact-info .credits{
   font-family: "Poppins";
   font-weight: 100;
   margin: 100px 50px 0 0;
+  border-bottom: 0.5px solid white;
+  padding-bottom: 20px;
 }
 
 .contact-info .credits h1{
@@ -768,6 +786,7 @@ section {
   font-weight: 700;
   word-spacing: 5px;
   color: rgb(0, 166, 255);
+  font-size: 1.5rem;
 }
 
 .contact-info .credits img{
@@ -782,6 +801,8 @@ section {
 
 .contact-info .queries{
   margin: 0 0 100px 50px;
+  border-bottom: 0.5px solid white;
+  padding-bottom: 20px;
 }
 
 .contact-info .queries h1{
@@ -797,6 +818,8 @@ section {
 
 .contact-info .connect{
  margin: 100px 0 0 50px;
+ border-bottom: 0.5px solid white;
+ padding-bottom: 20px;
 }
 
 .contact-info .connect h1{
@@ -810,6 +833,11 @@ section {
   margin-right: 15px;
  }
 
+ .imp-icons1{
+  display: flex;
+  justify-content: space-between;
+ }
+
 .map-container{
   font-family: 'Poppins';
   font-size: 1rem;
@@ -820,7 +848,9 @@ iframe{
   width: 330px;
 }
 .map-container p{
-  padding-top: 20px;
+  padding: 20px 10px;
+  font-size: 0.8rem;
+  font-weight: 300;
   padding-bottom: 0;
 }
 
@@ -1094,6 +1124,7 @@ iframe{
 @media screen and (max-width:560px){
  .contact-info{
   font-size: 0.8rem;
+  min-width: 300px;
  }
 
  .contact-info .queries{
@@ -1280,6 +1311,8 @@ iframe{
   font-style: italic;
   font-weight: 700;
   margin-right:45px ;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .dropbtn::before {

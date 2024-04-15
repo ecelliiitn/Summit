@@ -1,0 +1,15 @@
+{
+    "routes": [
+        { "src": "/home", "dest": "/index.html" },
+        { "src": "/Blogs", "dest": "/Blog1.html" },
+        { "src": "/ContactUs", "dest": "/contact.html" },
+        { "src": "/Sponsors", "dest": "/Sponsor.html" },
+        { "src": "/UXplorer", "dest": "/uxplorer.html" },
+        { "src": "/MarketWise", "dest": "/marketwise.html" },
+        { "src": "/Maximize", "dest": "/maximize.html" },
+        { "src": "/IPLauction", "dest": "/iplauction.html" },
+        { "src": "/Sellathon", "dest": "/sellathon.html" },
+        { "src": "/Pitchers4.0", "dest": "/pitcher.html" },
+        { "src": "/OptimizeOdyssey", "dest": "/optimizeodyssey.html" }
+    ]
+}
