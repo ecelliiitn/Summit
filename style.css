@@ -514,7 +514,7 @@ section {
   }
 
   .navigation.active .nav-items {
-    transform: translateY(10%);
+    transform: translateY(2%);
   }
 
   .navigation .nav-items a {
@@ -1164,7 +1164,7 @@ iframe{
   position: relative;
   max-width: 1200px;
   margin: 100px auto;
-  font-family: "Poppins ";
+  font-family: "Poppins";
   
 }
 .timeline .container{

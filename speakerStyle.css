@@ -353,10 +353,29 @@ a{
   .timeline .container .textbox{
     font-size: 2rem !important;
   }
+  .timeline .container img{
+    width: 60px;
+  }
+  .timeline .left-container img{
+    right: -30px;
+  }
+  .timeline .right-container img{
+    left: -30px;
+  }
   h1{
     font-size: 3rem;
     text-decoration: underline;
   }
+  .compete p{
+    font-size: 3rem !important;
+  }
+  .compete img{
+    width: 300px;
+  }
+  .compete{
+    margin: 70px 0;
+  }
+
   .contact-box{
     flex-direction: column;
   }
