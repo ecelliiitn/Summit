@@ -322,37 +322,54 @@ section {
 
 .about-section {
   color: #fff;
-  padding: 165px ;
+  padding: 165px;
   transition: 0.3 ease;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  contain: content;
+  /* contain: content; */
   width: 100%;
   font-family: "montserrat";
 }
 
 .line {
   height: 0;
-  border: 1px solid #729bb4;
-  box-shadow: 0 0 50px 10px #729bb4;
+  border: 0px solid #526ddc;
+  /* margin-top: 100px;
+  margin-bottom: 100px; */
+  box-shadow: 0 0 350px 30px #526ddc;
 }
 
 .about-section .about-us {
   position: absolute;
-  border: 1px solid var(--white-color);
+  border: 1.4px solid rgb(96, 169, 234);
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   width: 85%;
   border-radius: 5px;
-  padding: 30px 50px;
+  word-spacing: 3px;
   /* right: 200px; */
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   height: 70%;
-  overflow-y: scroll;
+  transform: scale(0.3);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.about-section .animate-about-us{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.about-section .about-us .back{
+  width: 100%;
+  height: 100%;
+  background-color: #00000078;
+  border-radius: 10px;
+  padding: 30px 50px;
 }
 
 #about1 .about-us{
@@ -380,7 +397,7 @@ section {
 }
 
 .about-section .about-us p {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 800;
   font-family: "Kode Mono";
   opacity: 1;
@@ -388,8 +405,24 @@ section {
 @media screen and (max-width : 733px){
   .about-section .about-us {
     width: 95%;
+    height: fit-content;
+  }
+  .about-section .about-us p {
+   font-size: 1rem;
+  }
+  .about-section{
+    min-height:140vh;
+    padding: 300px 0;
+    margin: 100px 0;
+  }
+  .about-section .about-us .back{
     padding: 30px 10px;
-    height: 80%;
+  }
+}
+@media screen and (max-width : 1203px){
+  .about-section .about-us{
+    height: fit-content;
+    font-size: 0.8rem;
   }
 }
 /* @media screen and (max-width : 1350px) {
@@ -487,7 +520,7 @@ section {
     justify-content: center;
     align-items: start;
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s ease;
   }
 
@@ -509,12 +542,14 @@ section {
     padding: 40px;
     border-radius: 20px;
     box-shadow: var(--box-shadow);
-    transform: translateY(-200px);
-    transition: 0.3s ease;
+    transform: translateY(-700px);
+    opacity: 1;
+    transition: 0.3s ease-in-out;
   }
 
   .navigation.active .nav-items {
     transform: translateY(2%);
+    opacity: 1;
   }
 
   .navigation .nav-items a {
@@ -615,7 +650,8 @@ section {
   height: 800px;
   margin: 30px 0;
   background-color: #091426;
-  
+  border-radius: 0;
+  margin-bottom: 200px;
 }
 @media screen and (max-width:766px){
   #events iframe{
