@@ -84,24 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  const speakers = document.querySelectorAll(".speaker");
+  // Wait for the DOM content to be fully loaded
+  const speakers = document.querySelectorAll(".about-section .about-us");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-
-        const containero = entry.target.classList.add('animate-speaker');
-
+      if (entry.isIntersecting) { // Check if the element is intersecting with the viewport
+        entry.target.classList.add('animate-about-us');
+        observer.unobserve(entry.target); // Stop observing once animation is triggered
       }
     });
+  }, {
+    threshold: 0.1 // Lower threshold for triggering the animation
   });
 
   speakers.forEach(speaker => {
     observer.observe(speaker); // Observe each card
   });
 });
-
-
 
 
 const galleryContainer = document.querySelector('.gallery-container');
@@ -114,6 +113,9 @@ class Carousel {
     this.carouselContainer = container;
     this.carouselControls = controls;
     this.carouselArray = [...items];
+    this.touchStartX = null;
+    this.touchEndX = null;
+    this.isMobile = this.detectMobile(); // Detect if the user is on a mobile device
   }
 
   updateGallery() {
@@ -131,7 +133,7 @@ class Carousel {
   }
 
   setCurrentState(direction) {
-    if (direction.className == 'gallery-controls-previous') {
+    if (direction === 'previous') {
       this.carouselArray.unshift(this.carouselArray.pop());
     } else {
       this.carouselArray.push(this.carouselArray.shift());
@@ -143,7 +145,7 @@ class Carousel {
     this.carouselControls.forEach(control => {
       const button = document.createElement('button');
       button.className = `gallery-controls-${control}`;
-      button.innerText ;
+      button.innerText; // Set button text
       galleryControlsContainer.appendChild(button);
     });
   }
@@ -153,17 +155,51 @@ class Carousel {
       const button = document.querySelector(`.gallery-controls-${control}`);
       button.addEventListener('click', e => {
         e.preventDefault();
-        this.setCurrentState(button);
+        this.setCurrentState(control);
       });
     });
   }
 
+  // Function to handle touch start
+  handleTouchStart(event) {
+    this.touchStartX = event.touches[0].clientX;
+  }
+
+  // Function to handle touch end
+  handleTouchEnd(event) {
+    this.touchEndX = event.changedTouches[0].clientX;
+    const touchDiff = this.touchStartX - this.touchEndX;
+    const sensitivity = 50; // Adjust sensitivity as needed
+
+    if (touchDiff > sensitivity) {
+      // Swipe right to left (next)
+      this.setCurrentState('next');
+    } else if (touchDiff < -sensitivity) {
+      // Swipe left to right (previous)
+      this.setCurrentState('previous');
+    }
+  }
+
+  // Function to initialize touch events only for mobile devices
+  initTouchEvents() {
+    if (this.isMobile) {
+      this.carouselContainer.addEventListener('touchstart', this.handleTouchStart.bind(this));
+      this.carouselContainer.addEventListener('touchend', this.handleTouchEnd.bind(this));
+    }
+  }
+
+  // Function to detect if the user is on a mobile device
+  detectMobile() {
+    return window.innerWidth <= 768; // Adjust threshold as needed
+  }
 }
 
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 
 exampleCarousel.setControls();
 exampleCarousel.useControls();
+exampleCarousel.initTouchEvents(); // Initialize touch events for sliding gesture only for mobile devices
+
 
 
 

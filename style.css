@@ -355,6 +355,13 @@ section {
   flex-direction: column;
   justify-content: center;
   height: 70%;
+  transform: scale(0.3);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.about-section .animate-about-us{
+  opacity: 1;
+  transform: scale(1);
 }
 
 .about-section .about-us .back{
