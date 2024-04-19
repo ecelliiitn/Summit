@@ -109,7 +109,7 @@ header .nav-bar {
 }
 
 .navigation .nav-items > a {
-  font-family: "Orbitron";
+  font-family: "montserrat";
   font-style: italic;
   position: relative;
   color: var(--white-color);
@@ -330,7 +330,7 @@ section {
   justify-content: center;
   contain: content;
   width: 100%;
-  font-family: "Orbitron";
+  font-family: "montserrat";
 }
 
 .line {
