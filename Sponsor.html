@@ -9,125 +9,142 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <style>
-    .speaker{
-        opacity: 1;
-        contain: content;
-        
+    .speaker {
+      opacity: 1;
+      contain: content;
+
     }
-    .Speakers .title{
-       margin: 200px 0 100px 0;
-        
+
+    .Speakers .title {
+      margin: 200px 0 100px 0;
+
     }
+
     #sp {
-        margin-top: -200px;
+      margin-top: -200px;
 
     }
-   
+
     .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 10px;
-  padding: 20px;
-  text-align: center;
-  overflow: hidden;
-  display: inline;
-  background-color: rgb(52, 68, 107);
-}
-.speaker:nth-child(n):hover .overlay {
-  opacity: 1;
-}
-.box-2 .btn {
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
-  width: 100px;
-  cursor: pointer;
-  margin-top: 30px;
-  margin-left: 20px;
-}
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.5);
+      /* Black see-through */
+      color: #f1f1f1;
+      width: 100%;
+      transition: .5s ease;
+      opacity: 0;
+      color: white;
+      font-size: 10px;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+      display: inline;
+      background-color: rgb(52, 68, 107);
+    }
 
-/* Button Two */
-.box-2 .btn-two {
-  color: #FFF;
-  transition: all 0.5s;
-  position: relative; 
-}
-.box-2 .btn-two span {
-  z-index: 2; 
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%; 
-}
-.box-2 .btn-two::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid rgba(255,255,255,0.2);
-  background-color: rgba(255,255,255,0.1);
-}
-.box-2 .btn-two::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid rgba(255,255,255,0.2);
-  background-color: rgba(255,255,255,0.1);
-}
-.box-2 .btn-two:hover::before {
-  transform: rotate(-45deg);
-  background-color: rgba(255,255,255,0);
-}
-.box-2 .btn-two:hover::after {
-  transform: rotate(45deg);
-  background-color: rgba(255,255,255,0);
-}
-.box-2 .btn {
-  line-height: 50px;
-  height: 50px;
-  text-align: center;
-  width: 100px;
-  cursor: pointer;
-  margin-top: 30px;
-  margin-left: 20px;
-  position: relative; /* Added position relative to .btn */
-}
-.speaker {
-  background-position: 6px;
+    .speaker:nth-child(n):hover .overlay {
+      opacity: 1;
+    }
 
-}
-/* Button Two */
-.box-2 .btn-two {
-  color: #FFF;
-  transition: all 0.5s;
-  position: relative; 
-}
-.box-2 .btn-two span {
-  z-index: 2; 
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%; 
-  top: 0; /* Added to position the text properly */
-  left: 0; /* Added to position the text properly */
-}
+    .box-2 .btn {
+      line-height: 50px;
+      height: 50px;
+      text-align: center;
+      width: 100px;
+      cursor: pointer;
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+
+    /* Button Two */
+    .box-2 .btn-two {
+      color: #FFF;
+      transition: all 0.5s;
+      position: relative;
+    }
+
+    .box-2 .btn-two span {
+      z-index: 2;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .box-2 .btn-two::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all 0.5s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .box-2 .btn-two::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: all 0.5s;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .box-2 .btn-two:hover::before {
+      transform: rotate(-45deg);
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    .box-2 .btn-two:hover::after {
+      transform: rotate(45deg);
+      background-color: rgba(255, 255, 255, 0);
+    }
+
+    .box-2 .btn {
+      line-height: 50px;
+      height: 50px;
+      text-align: center;
+      width: 100px;
+      cursor: pointer;
+      margin-top: 30px;
+      margin-left: 20px;
+      position: relative;
+      /* Added position relative to .btn */
+    }
+
+    .speaker {
+      background-position: 6px;
+
+    }
+
+    /* Button Two */
+    .box-2 .btn-two {
+      color: #FFF;
+      transition: all 0.5s;
+      position: relative;
+    }
+
+    .box-2 .btn-two span {
+      z-index: 2;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      /* Added to position the text properly */
+      left: 0;
+      /* Added to position the text properly */
+    }
   </style>
 </head>
 
@@ -149,37 +166,102 @@
   </div>
 
   <section class="Speakers" id="sp">
+    <span class="title">Sponsors</span>
+    <div class="speak">
+      <div class="speaker" style="background-image: url('images/iiit_networks.png');">
+        <div class="overlay">
+          <h1>IIIT Networks</h1>
+          <h1>Community Partner 2k24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/beyond_d.png');">
+        <div class="overlay">
+          <h1>Beyond Destination</h1>
+          <h1>Travel Partner 2k24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/truscholar.png');">
+        <div class="overlay">
+          <h1>TruScholar</h1>
+          <h1>Credentials Partner 2k24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/hoverrobotics.png');">
+        <div class="overlay">
+          <h1>HoverRobotix</h1>
+          <h1>Tech Partner 2K24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/unstop.png');">
+        <div class="overlay">
+          <h1>Unstop</h1>
+          <h1>Platform Partner 2k24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/MentorX.png');">
+        <div class="overlay">
+          <h1>MentorX</h1>
+          <h1>Mentorship Partner 2k24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/Revup.png');">
+        <div class="overlay">
+          <h1>RevUp</h1>
+          <h1>Upskill Partner 2K24</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/sp4.webp');">
+        <div class="overlay">
+          <h1>StockGro</h1>
+          <h1>Simulation Partner 2k24</h1>
+        </div>
+      </div>
+
+
+
+  </section>
+
+  <section class="Speakers" id="sp">
     <span class="title">Past Sponsors</span>
     <div class="speak">
-        <div class="speaker" style="background-image: url('images/sp1.webp');">
-            <div class="overlay"><h1>Synoriq</h1>
-              <h1>Title Sponsor 2K22</h1> 
-            </div>
-            
-          </div>
-          
-          <div class="speaker" style="background-image: url('images/sp2.webp');">
-            <div class="overlay"><h1>Western Coalfields Limited</h1>
-              <h1>Title Sponsor 2K21</h1>  </div>
-          </div>
-          <div class="speaker" style="background-image: url('images/st333.webp');">
-            <div class="overlay"><h1>Tsecond</h1>
-            <h1>Event Sponsor</h1></div>
-          </div>
-          <div class="speaker" style="background-image: url('images/sp4.webp');">
-            <div class="overlay"><h1>SimpliClarify</h1>
-              <h1>Event Sponsor </h1> </div>
-          </div>
-          <div class="speaker" style="background-image: url('images/sp5.webp');">
-            <div class="overlay"><h1>StockGro</h1>
-            <h1>Platform Sponsor</h1></div>
-          </div>
-          <div class="speaker" style="background-image: url('images/sp6.webp');">
-            <div class="overlay"><h1>D2C</h1>
-            <h1>Platform Sponsor</h1></div>
-          </div>
+      <div class="speaker" style="background-image: url('images/sp1.webp');">
+        <div class="overlay">
+          <h1>Synoriq</h1>
+          <h1>Title Sponsor 2K22</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/sp2.webp');">
+        <div class="overlay">
+          <h1>Western Coalfields Limited</h1>
+          <h1>Title Sponsor 2K21</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/st333.webp');">
+        <div class="overlay">
+          <h1>Tsecond</h1>
+          <h1>Event Sponsor</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/sp5.webp');">
+        <div class="overlay">
+          <h1>SimpliClarify</h1>
+          <h1>Event Sponsor </h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/sp4.webp');">
+        <div class="overlay">
+          <h1>StockGro</h1>
+          <h1>Platform Sponsor</h1>
+        </div>
+      </div>
+      <div class="speaker" style="background-image: url('images/sp6.webp');">
+        <div class="overlay">
+          <h1>D2C</h1>
+          <h1>Platform Sponsor</h1>
+        </div>
+      </div>
   </section>
- 
+
 
   <footer class="contact-section" id="connect">
     <div class="csm">
@@ -202,8 +284,10 @@
         <div class="contact-info">
           <div class="queries">
             <h1>Technical Queries At:</h1>
-            <h2><a href="tel:+919136754076" style="text-decoration: none; color: #fff;"><i class="uil uil-phone"></i>&nbspCorporate Lead</a></h2>
-            <h2><a href="tel:+919175713191" style="text-decoration: none; color: #fff;"><i class="uil uil-phone"></i>&nbspPR Lead</a></h2>
+            <h2><a href="tel:+919136754076" style="text-decoration: none; color: #fff;"><i
+                  class="uil uil-phone"></i>&nbspCorporate Lead</a></h2>
+            <h2><a href="tel:+919175713191" style="text-decoration: none; color: #fff;"><i
+                  class="uil uil-phone"></i>&nbspPR Lead</a></h2>
           </div>
           <div class="connect">
             <h1>Connect With Us:</h1>
@@ -219,15 +303,16 @@
           </div>
         </div>
       </div>
-      
-      
+
+
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3726.0643924249935!2d79.02379987502918!3d20.949929080679713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0529518230f%3A0x45b76be0621cbb88!2sIndian%20Institute%20of%20Information%20Technology%2C%20Nagpur%20(IIITN)!5e0!3m2!1sen!2sin!4v1707683924242!5m2!1sen!2sin"
           width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <p>Permanent Address: Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari Soot Girni, Village - Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra- 441108</p>
-          
+        <p>Permanent Address: Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari Soot Girni, Village -
+          Waranga, PO - Dongargaon(Butibori), Tahsil- Nagpur (Rural), District Nagpur, Maharashtra- 441108</p>
+
       </div>
     </div>
   </footer>
