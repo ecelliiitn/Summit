@@ -107,9 +107,14 @@ const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['previous', 'next'];
 const galleryItems = document.querySelectorAll('.gallery-item');
+const galleryContainer1 = document.querySelector('.gallery-container1');
+const galleryControlsContainer1 = document.querySelector('.gallery-controls1');
+const galleryControls1 = ['previous', 'next'];
+const galleryItems1 = document.querySelectorAll('.gallery-item1');
 
 class Carousel {
-  constructor(container, items, controls) {
+  constructor(container, items, controls, galleryControlsContainero) {
+    this.CarouselgalleryControlsContainero = galleryControlsContainero;
     this.carouselContainer = container;
     this.carouselControls = controls;
     this.carouselArray = [...items];
@@ -141,18 +146,19 @@ class Carousel {
     this.updateGallery();
   }
 
-  setControls() {
+  setControls(e) {
     this.carouselControls.forEach(control => {
       const button = document.createElement('button');
-      button.className = `gallery-controls-${control}`;
+      button.className = `gallery-controls${e}-${control}`;
       button.innerText; // Set button text
-      galleryControlsContainer.appendChild(button);
+      this.CarouselgalleryControlsContainero.appendChild(button);
     });
+    
   }
 
-  useControls() {
+  useControls(e) {
     this.carouselControls.forEach(control => {
-      const button = document.querySelector(`.gallery-controls-${control}`);
+      const button = document.querySelector(`.gallery-controls${e}-${control}`);
       button.addEventListener('click', e => {
         e.preventDefault();
         this.setCurrentState(control);
@@ -194,12 +200,14 @@ class Carousel {
   }
 }
 
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
-
-exampleCarousel.setControls();
-exampleCarousel.useControls();
+const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls,galleryControlsContainer);
+const exampleCarousel1 = new Carousel(galleryContainer1, galleryItems1, galleryControls1,galleryControlsContainer1);
+exampleCarousel.setControls('');
+exampleCarousel.useControls('');
 exampleCarousel.initTouchEvents(); // Initialize touch events for sliding gesture only for mobile devices
-
+exampleCarousel1.setControls('1');
+exampleCarousel1.useControls('1');
+exampleCarousel1.initTouchEvents();
 
 
 
